@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaua Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/extras.css">
+</head>
+
+<body>
+
+  <!-- OVERLAY para fechar o carrinho -->
+  <div id="overlay"></div>
+
+  <!-- SIDEBAR CARRINHO -->
+  <div id="sidebar-carrinho">
+    <div class="carrinho-header">
+      <h3>🛒 Meu Carrinho</h3>
+      <button id="fechar-carrinho">✕</button>
+    </div>
+    <div id="carrinho-lista"></div>
+    <div class="carrinho-footer">
+      <p id="carrinho-total">Total: R$ 0,00</p>
+      <button id="btn-finalizar">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header-section">
+    <header>
+      <img src="./img/logo.svg" alt="Logo Pag Store">
+      <nav>
+        <a href="#">Games</a>
+        <a href="#">Browse Games</a>
+        <a href="#">Store</a>
+      </nav>
+      <div class="btns">
+        <!-- Botão do carrinho com badge -->
+        <button id="btn-carrinho" class="btn-carrinho-topo">
+          🛒 Carrinho
+          <span id="carrinho-badge" style="display:none">0</span>
+        </button>
+        <a href="#">Sign up</a>
+        <a href="#">Login</a>
+      </div>
+    </header>
+
+    <section id="hero">
+      <h1>MultiVersus</h1>
+      <p>Now officially free to play for all Xbox users.</p>
+      <a href="#">Get in now</a>
+    </section>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section id="why-bigode-store">
+      <div class="title">
+        <h2>Why BigodeStore</h2>
+        <p>We are the official Xbox partner that provides official video games</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="./img/icon1.svg" alt="">
+          <p>5000+ video games available</p>
+        </div>
+        <div class="card">
+          <img src="./img/icon2.svg" alt="">
+          <p>Trusted by 100.000+ customers</p>
+        </div>
+        <div class="card">
+          <img src="./img/icon3.svg" alt="">
+          <p>Available for all Xbox consoles</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROMOÇÕES -->
+  <section class="promocoes">
+    <h2>🔥 Jogos em Promoção</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./img/image.png" alt="Minecraft">
+        <h3>Minecraft</h3>
+        <p class="preco">R$ 99,90 <span>R$ 199,90</span></p>
+        <button>Comprar</button>
+      </div>
+      <div class="card">
+        <img src="./img/image copy.png" alt="GTA V">
+        <h3>GTA V</h3>
+        <p class="preco">R$ 49,90 <span>R$ 129,90</span></p>
+        <button>Comprar</button>
+      </div>
+      <div class="card">
+        <img src="./img/image copy 2.png" alt="Forza Horizon 5">
+        <h3>Forza Horizon 5</h3>
+        <p class="preco">R$ 149,90 <span>R$ 249,90</span></p>
+        <button>Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR GAMES -->
+  <section class="popular-games">
+    <div class="title">
+      <h2>Popular Games</h2>
+      <a href="#">Browse all games</a>
+    </div>
+
+    <!-- BUSCA + FILTROS -->
+    <div class="busca-filtros">
+      <input type="text" id="busca-jogo" placeholder="🔍 Buscar jogo...">
+      <div class="filtros">
+        <button class="filtro-btn ativo" data-cat="todos">Todos</button>
+        <button class="filtro-btn" data-cat="acao">Ação</button>
+        <button class="filtro-btn" data-cat="esporte">Esporte</button>
+        <button class="filtro-btn" data-cat="aventura">Aventura</button>
+        <button class="filtro-btn" data-cat="corrida">Corrida</button>
+        <button class="filtro-btn" data-cat="terror">Terror</button>
+        <button class="filtro-btn" data-cat="estrategia">Estratégia</button>
+      </div>
+    </div>
+
+    <!-- Grid renderizado via JS -->
+    <div class="games-grid"></div>
+  </section>
+
+  <!-- COMING SOON -->
+  <section class="coming-soon">
+    <div class="container">
+      <h2>Coming Soon</h2>
+      <div class="grid">
+        <div class="card large">
+          <img src="./img/image copy 9.png" alt="Call of Duty Modern Warfare II">
+          <div class="overlay">
+            <h3>Call of Duty®: Modern Warfare® II</h3>
+            <a href="#">Pre-order now!</a>
+          </div>
+        </div>
+        <div class="card small">
+          <img src="./img/image copy 10.png" alt="FIFA 23">
+          <div class="overlay">
+            <h3>EA SPORTS™ FIFA 23</h3>
+            <a href="#">Pre-order now!</a>
+          </div>
+        </div>
+        <div class="card small">
+          <img src="./img/image copy 12.png" alt="Resident Evil 4 Remake">
+          <div class="overlay">
+            <h3>Resident Evil 4 - Remake</h3>
+            <a href="#">Pre-order now!</a>
+          </div>
+        </div>
+        <div class="card large">
+          <img src="./img/image copy 11.png" alt="NBA 2K22">
+          <div class="overlay">
+            <h3>NBA2K22</h3>
+            <a href="#">Pre-order now!</a>
+          </div>
+        </div>
+        <div class="card small">
+          <img src="./img/image copy 8.png" alt="Alien Dark Descent">
+          <div class="overlay">
+            <h3>ALIEN: Dark Descent</h3>
+            <a href="#">Pre-order now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials">
+    <h1>12.000+ gamers satisfeitos</h1>
+    <p>Veja o que nossos clientes falam sobre nossos produtos e serviços.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.pravatar.cc/150?img=1" alt="">
+        <h3>Jacob Jones</h3>
+        <div class="stars"></div>
+        <p>Excelente atendimento e produtos de qualidade.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pravatar.cc/150?img=12" alt="">
+        <h3>Cameron Williamson</h3>
+        <div class="stars"></div>
+        <p>Recomendo para todos que procuram confiança.</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pravatar.cc/150?img=5" alt="">
+        <h3>Kristin Watson</h3>
+        <div class="stars"></div>
+        <p>Experiência incrível e suporte muito rápido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="logo"><span>Bigode</span>Store</div>
+      <div class="footer-column">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#">Rastreamento</a></li>
+          <li><a href="#">Lojas</a></li>
+          <li><a href="#">Política de Troca</a></li>
+          <li><a href="#">Suporte</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Guias</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Redes Sociais</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2025 BigodeStore - Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Script principal -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
